@@ -8,6 +8,10 @@ import aboveImg from './images/mobile/image-from-above.jpg'
 import pocketImg from './images/mobile/image-pocket-borealis.jpg'
 import curiosityImg from './images/mobile/image-curiosity.jpg'
 import fisheyeImg from './images/mobile/image-fisheye.jpg'
+import facebookIcon from './images/icon-facebook.svg'
+import twitterIcon from './images/icon-twitter.svg'
+import pinterestIcon from './images/icon-pinterest.svg'
+import instagramIcon from './images/icon-instagram.svg'
 
 export const linkData = [
 	{
@@ -78,5 +82,24 @@ export const creationsData = [
 		title: 'make it fisheye',
 		img: fisheyeImg,
 		alt: 'fisheye',
+	},
+]
+
+export const iconsData = [
+	{
+		img: facebookIcon,
+		alt: 'facebook icon',
+	},
+	{
+		img: twitterIcon,
+		alt: 'twitter icon',
+	},
+	{
+		img: pinterestIcon,
+		alt: 'pinterest icon',
+	},
+	{
+		img: instagramIcon,
+		alt: 'instagram icon',
 	},
 ]
