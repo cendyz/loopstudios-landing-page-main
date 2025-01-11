@@ -1,0 +1,9 @@
+@use './weights' as *;
+
+@mixin joseFont {
+	font-size: 3.7rem;
+	font-family: $fontJos;
+	font-weight: $josefin;
+	text-transform: uppercase;
+	text-align: center;
+}

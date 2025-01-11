@@ -1,30 +1,34 @@
 import styles from './NavMobile.module.scss'
 import logo from '../../../images/logo.svg'
-import hamburger from '../../../images/icon-hamburger.svg'
-import closeHamburger from '../../../images/icon-close.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { linkData } from '../../../data'
+import { linkData, burgerData } from '../../../data'
 
 const NavMobile = () => {
 	const [menu, setMenu] = useState(false)
+
+	useEffect(() => {
+		if (menu) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'visible'
+		}
+	}, [menu])
+
 	return (
 		<nav className={styles.nav}>
 			<img src={logo} alt='Logo loopstudios' className={styles.logo} />
-			{!menu && <button className={styles.hamburger} onClick={() => setMenu(!menu)}>
-				<img
-					src={hamburger}
-					alt='Menu icon'
-					className={styles.hamburgerIcon}
-				/>
-			</button>}
-			{menu && <button className={styles.hamburger} onClick={() => setMenu(!menu)}>
-				<img
-					src={closeHamburger}
-					alt='X icon'
-					className={styles.hamburgerIcon}
-				/>
-			</button>}
+			{burgerData.map(({ img, alt }, index) => {
+				if ((index === 0 && !menu) || (index === 1 && menu))
+					return (
+						<button
+							key={index}
+							className={styles.hamburger}
+							onClick={() => setMenu(!menu)}>
+							<img src={img} alt={alt} className={styles.hamburgerIcon} />
+						</button>
+					)
+			})}
 			<div
 				className={classNames(styles.navMenu, { [styles.active]: menu })}>
 				<div className={styles.menu}>

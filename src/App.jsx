@@ -1,10 +1,11 @@
-import { Nav, Header } from './components/index'
+import { Nav, Header, MainContent } from './components/index'
 
 const App = () => {
 	return (
 		<>
 			<Nav />
 			<Header />
+			<MainContent />
 		</>
 	)
 }

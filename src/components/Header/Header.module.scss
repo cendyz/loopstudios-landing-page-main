@@ -23,11 +23,10 @@
 }
 
 .title {
+	@include joseFont;
+	padding-right: 1em;
+	text-align: left;
 	color: $white;
-	font-family: $fontJos;
-	font-weight: $josefin;
-	text-transform: uppercase;
 	font-size: 4.5rem;
 	line-height: 1;
-	padding-right: 1em;
 }
