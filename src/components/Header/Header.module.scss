@@ -1,0 +1,33 @@
+@use '../../sass/utilities/' as *;
+
+.header {
+	position: relative;
+	height: 100%;
+	margin-top: -6.563em;
+	z-index: 5;
+}
+
+.pattern {
+	width: 100%;
+}
+
+.textBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(100% - 1.5em);
+	border: 2px solid $white;
+	padding: 1.2em;
+	z-index: 5;
+}
+
+.title {
+	color: $white;
+	font-family: $fontJos;
+	font-weight: $josefin;
+	text-transform: uppercase;
+	font-size: 4.5rem;
+	line-height: 1;
+	padding-right: 1em;
+}

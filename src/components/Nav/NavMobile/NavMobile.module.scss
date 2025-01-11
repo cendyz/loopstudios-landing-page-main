@@ -1,0 +1,16 @@
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 1.5em;
+    // background-color: black;
+    z-index: 10;
+}
+
+.logo {
+    width: 147px;
+}
+
+.hamburgerIcon {
+    width: 25px;
+}
