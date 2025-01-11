@@ -1,16 +1,70 @@
+@use '../../../sass/utilities/' as *;
+
 .nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2.5em 1.5em;
-    // background-color: black;
-    z-index: 10;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5em;
+	z-index: 10;
+	height: 6.25em;
 }
 
 .logo {
-    width: 147px;
+	width: 9.188em;
+}
+
+.logo,
+.hamburger {
+	z-index: 15;
+}
+
+.hamburger {
+	// height: 17px;
+	padding: 1em;
+	padding-right: 0;
+	transition: opacity 0.15s, visibility 0.15s;
 }
 
 .hamburgerIcon {
-    width: 25px;
+	width: 1.563em;
+}
+
+.navMenu,
+.menu {
+	display: flex;
+}
+
+.navMenu {
+	padding: 0 1.5em;
+	position: fixed;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 25em;
+	height: 100%;
+	background-color: $black;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -10;
+	transition: opacity 0.15s, visibility 0.15s;
+}
+
+.menu {
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+.link {
+	color: $white;
+	font-family: $fontJos;
+	font-weight: $josefin;
+	font-size: 2.8rem;
+	text-transform: uppercase;
+}
+.active {
+	visibility: visible;
+	z-index: 7;
+	opacity: 1;
 }
