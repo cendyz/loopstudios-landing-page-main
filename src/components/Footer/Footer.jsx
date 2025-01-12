@@ -1,6 +1,7 @@
 import styles from './Footer.module.scss'
 import { linkData, iconsData } from '../../data'
 import { useState } from 'react'
+import logo from '../../images/logo.svg'
 const actualYear = new Date().getFullYear()
 
 const Footer = () => {
@@ -9,11 +10,7 @@ const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>
-				<img
-					src='src/images/logo.svg'
-					alt='Logo loopstudios'
-					className={styles.logo}
-				/>
+				<img src={logo} alt='Logo loopstudios' className={styles.logo} />
 				<div className={styles.linksBox}>
 					{linkData.map(({ link }, index) => {
 						return (
