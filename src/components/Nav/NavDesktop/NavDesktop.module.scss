@@ -1,3 +1,24 @@
+@use '../../../sass/utilities' as *;
+
 .nav {
-    display: none;
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.nav {
+		@include wrapper;
+		@include nav;
+		padding: 4em 0;
+	}
+
+	.linksBox {
+		display: flex;
+		column-gap: 2.3em;
+	}
+
+	.link {
+		color: $white;
+		text-transform: capitalize;
+		font-size: 2rem;
+	}
 }

@@ -7,3 +7,17 @@
 	text-transform: uppercase;
 	text-align: center;
 }
+
+@mixin wrapper {
+	width: 100%;
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+@mixin nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
