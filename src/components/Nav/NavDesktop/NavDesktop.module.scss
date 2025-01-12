@@ -22,8 +22,11 @@
 	}
 
 	.link {
+		display: block;
+		position: relative;
 		color: $white;
 		text-transform: capitalize;
 		font-size: 2rem;
+		@include linkHoover;
 	}
 }

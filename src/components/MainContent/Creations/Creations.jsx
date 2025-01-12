@@ -3,7 +3,7 @@ import { creationsData } from '../../../data'
 
 const Creations = () => {
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id='products'>
 			<div className={styles.upBox}>
 				<h2 className={styles.title}>our creations</h2>
 				<button className={styles.desktopBtn}>see all</button>

@@ -34,6 +34,7 @@
 @media (min-width: 992px) {
 	.header {
 		margin-top: -11.5vw;
+		overflow: hidden;
 
 		&::before {
 			content: '';

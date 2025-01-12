@@ -8,28 +8,43 @@ const Footer = () => {
 
 	return (
 		<footer className={styles.footer}>
-			<img
-				src='src/images/logo.svg'
-				alt='Logo loopstudios'
-				className={styles.logo}
-			/>
-			{linkData.map(({ link }, index) => {
-				return (
-					<a href='#' className={styles.link} key={index}>
-						{link}
-					</a>
-				)
-			})}
-			<div className={styles.iconsBox}>
-				{iconsData.map(({ img, alt }, index) => {
-					return (
-						<img src={img} alt={alt} className={styles.icon} key={index} />
-					)
-				})}
+			<div className={styles.wrapper}>
+				<img
+					src='src/images/logo.svg'
+					alt='Logo loopstudios'
+					className={styles.logo}
+				/>
+				<div className={styles.linksBox}>
+					{linkData.map(({ link }, index) => {
+						return (
+							<a href='#' className={styles.link} key={index}>
+								{link}
+							</a>
+						)
+					})}
+				</div>
+				<div className={styles.iconsBox}>
+					{iconsData.map(({ img, alt, link }, index) => {
+						return (
+							<a
+								href={link}
+								target='_blank'
+								rel='noopener noreferrer'
+								className={styles.iconLink}>
+								<img
+									src={img}
+									alt={alt}
+									className={styles.icon}
+									key={index}
+								/>
+							</a>
+						)
+					})}
+				</div>
+				<p className={styles.copyright}>
+					© {year} Loopstudios. All rights reserved.
+				</p>
 			</div>
-			<p className={styles.copyright}>
-				© {year} Loopstudios. All rights reserved.
-			</p>
 		</footer>
 	)
 }

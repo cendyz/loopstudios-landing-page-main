@@ -83,6 +83,12 @@
 	.desktopBtn {
 		display: block;
 		margin: 0;
+		transition: color 0.2s, background-color 0.2s;
+
+		&:hover {
+			color: $white;
+			background-color: $black;
+		}
 	}
 
 	.title {
@@ -107,12 +113,24 @@
 	}
 
 	.imageBox {
+		position: relative;
+		cursor: pointer;
 		&::before {
 			background: linear-gradient(
 				180deg,
 				rgba(255, 255, 255, 0) 25%,
 				rgba(7, 19, 14, 0.6236695361738445) 100%
 			);
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: background-color 0.2s;
 		}
 
 		&:nth-child(3),
@@ -122,6 +140,16 @@
 				width: 74%;
 			}
 		}
+
+		&:hover {
+			.secondTitle {
+				color: $black;
+			}
+
+			&::after {
+				background-color: rgba(255, 255, 255, 0.7);
+			}
+		}
 	}
 
 	.secondTitle {
@@ -129,5 +157,7 @@
 		left: 3.11vw;
 		font-size: 2.8rem;
 		letter-spacing: 2px;
+		transition: color 0.2s;
+		z-index: 33;
 	}
 }

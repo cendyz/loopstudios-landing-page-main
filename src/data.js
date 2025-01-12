@@ -26,6 +26,7 @@ import fisheyeImg2 from './images/desktop/image-fisheye.jpg'
 export const linkData = [
 	{
 		link: 'about',
+		id: 'about',
 	},
 	{
 		link: 'careers',
@@ -35,6 +36,7 @@ export const linkData = [
 	},
 	{
 		link: 'products',
+		id: 'products',
 	},
 	{
 		link: 'support',
@@ -107,17 +109,21 @@ export const iconsData = [
 	{
 		img: facebookIcon,
 		alt: 'facebook icon',
+		link: 'https://www.facebook.com/',
 	},
 	{
 		img: twitterIcon,
 		alt: 'twitter icon',
+		link: 'https://x.com/',
 	},
 	{
 		img: pinterestIcon,
 		alt: 'pinterest icon',
+		link: 'https://pinterest.com/',
 	},
 	{
 		img: instagramIcon,
 		alt: 'instagram icon',
+		link: 'https://www.instagram.com/',
 	},
 ]

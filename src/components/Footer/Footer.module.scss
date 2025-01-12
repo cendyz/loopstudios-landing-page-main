@@ -1,36 +1,111 @@
 @use '../../sass//utilities' as *;
 
 .footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 3.5em 2.5em;
+	padding: 3.5em 1.5em;
 	background-color: $black;
 }
 
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
 .logo {
-    margin-bottom: 1em;
-    width: 9.25em;
+	margin-bottom: 1em;
+	width: 9.25em;
+}
+
+.linksBox {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 1em;
 }
 
 .link {
-    margin-top: 1.5em;
-    color: $white;
-    font-size: 1.7rem;
-    text-transform: capitalize;
+	@include joseFont;
+	color: $white;
+	font-size: 1.7rem;
+	text-transform: capitalize;
 }
 
 .iconsBox {
-    margin-top: 4em;
-    display: flex;
-    column-gap: 1.5em;
+	margin-top: 4em;
+	display: flex;
+	column-gap: 1.5em;
 }
 
 .icon {
-    width: 100%;
+	width: 100%;
 }
 
 .copyright {
-    margin-top: 1.3em;
-    color: $dark-gray;
+	margin-top: 1.3em;
+	color: $dark-gray;
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		@include wrapper;
+		display: grid;
+		grid-template-areas:
+			'logo icons'
+			'links copyright';
+		flex-direction: row;
+		align-items: center;
+		row-gap: 2em;
+	}
+
+	.logo {
+		padding-bottom: 0.5em;
+		grid-area: logo;
+		margin-bottom: 0;
+	}
+
+	.linksBox {
+		margin-top: 0;
+		grid-area: links;
+		flex-direction: row;
+		column-gap: 1.5em;
+	}
+
+	.iconsBox {
+		grid-area: icons;
+	}
+
+	.link {
+		position: relative;
+		@include linkHoover;
+		&::before {
+			color: $dark-gray;
+		}
+	}
+
+	.iconLink {
+		position: relative;
+		@include linkHoover;
+	}
+
+	.icon {
+		padding-bottom: 0.5em;
+		width: 100%;
+		
+		// border-bottom: 2px solid transparent;
+		// transition: border-bottom-color 0.2s;
+		// &:hover {
+		// 	// border-bottom-color: $white;
+		// }
+	}
+
+	.copyright {
+		grid-area: copyright;
+	}
+
+	.iconsBox,
+	.copyright {
+		margin-top: 0;
+		margin-left: auto;
+	}
 }

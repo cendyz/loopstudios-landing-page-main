@@ -4,7 +4,7 @@ import styles from './Introduction.module.scss'
 
 const Introduction = () => {
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id='about'>
 			<picture>
 				<source srcSet={desktopImg} media='(min-width:992px)' />
 				<img

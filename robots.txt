@@ -1,0 +1,4 @@
+# Welcome to frontend mentor project
+# hi robots;
+User-agent: *
+Disallow: /
