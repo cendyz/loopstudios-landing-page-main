@@ -1,3 +1,9 @@
 .main {
 	padding: 5em 1.5em;
 }
+
+@media (min-width: 992px) {
+	.main {
+		padding: 10em 0;
+	}
+}

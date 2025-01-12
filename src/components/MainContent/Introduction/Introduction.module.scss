@@ -26,3 +26,33 @@
 	font-size: 1.6rem;
 	line-height: 1.8;
 }
+
+@media (min-width: 992px) {
+	.section {
+		@include wrapper;
+		position: relative;
+		margin-bottom: 10em;
+	}
+
+	.img {
+		width: 63%;
+	}
+
+	.textBox {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 4.5em 0.2em 0 4.5em;
+		width: 50%;
+		background-color: $white;
+	}
+
+	.title,
+	.desc {
+		text-align: left;
+	}
+
+	.desc {
+		padding-left: 0;
+	}
+}
