@@ -33,7 +33,7 @@
 
 @media (min-width: 992px) {
 	.header {
-		margin-top: -10em;
+		margin-top: -11.5vw;
 
 		&::before {
 			content: '';
@@ -55,12 +55,13 @@
 		@include wrapper;
 		border: none;
 		padding-left: 0;
+		margin-left: 1.5em;
 	}
 
 	.title {
 		border: 2px solid $white;
 		padding: 0.45em 1.8em 0.3em 0.3em;
-		width: 57%;
+		width: 10em;
 		font-size: 6.3rem;
 		letter-spacing: 2px;
 	}
