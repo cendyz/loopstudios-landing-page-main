@@ -30,13 +30,9 @@ const Footer = () => {
 								href={link}
 								target='_blank'
 								rel='noopener noreferrer'
-								className={styles.iconLink}>
-								<img
-									src={img}
-									alt={alt}
-									className={styles.icon}
-									key={index}
-								/>
+								className={styles.iconLink}
+								key={index}>
+								<img src={img} alt={alt} className={styles.icon} />
 							</a>
 						)
 					})}
